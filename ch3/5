@@ -1,0 +1,26 @@
+# Exercise 5 Konditorei coffee shop 
+#   This program calculates the cost of an order of coffee.
+#   Price per pound plus shipping 
+#
+#   The Konditorei coffee shop sells coffee at $10.50 a pound plus the cost of
+#       shipping. Each order ships for $0.86 per pound + $1.50 fixed cost for
+#       overhead. Write a program that calculates the cost of an order.
+
+def main():
+    # Describe the program to the user
+    print "This program calculates the cost of an order of coffee from Konditorei"
+    print "The price per pound of coffee plus the shipping cost"
+    print
+
+    #Get our inputs, the number of pounds of coffee
+    lbs = input("Enter the nuber of pounds of coffee in the order: ")
+
+    #Compute the cost
+    cost = (lbs * 10.5) + (0.86 * lbs + 1.5)
+
+    #print the results, round down to 2 decimel points
+    print
+    print "The cost of your order is", "$%.2f" % round(cost, 2)
+
+main()    
+    
