@@ -3,7 +3,6 @@
 #   This program determines the molecular weight of a hydrocarbon based on
 #   the number of hydrogen, carbon and oxygen atoms.
 
-import math
 def main():
 
     # Describe the program to the user
