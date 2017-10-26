@@ -1,0 +1,14 @@
+#Price per square inch
+#   This program calculates the price per square inch of a pizza
+#   Takes price and diameter inputs
+
+import math
+def main():
+    print "This program calculates the price per square inch of pizza"
+    diameter = input("Please enter the size of the pizza in inches - diameter: ")
+    price = input("Please enter the price of the pizza: ")
+    area = math.pi * (diameter / 2) ** 2
+    ppsi = price / area 
+    print "The area of the pizza is ", "%.2f" % round(area, 2)
+    print "The price per square inch of pizza is  ", "%.2f" % round(ppsi, 2), "per square inch"
+main()
