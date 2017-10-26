@@ -16,11 +16,14 @@ def main():
     lbs = input("Enter the nuber of pounds of coffee in the order: ")
 
     #Compute the cost
-    cost = (lbs * 10.5) + (0.86 * lbs + 1.5)
+    shipping = 1.5 + lbs * 0.86
+    coffee = lbs * 10.5
+    cost = coffee + shipping
 
     #print the results, round down to 2 decimel points
     print
-    print "The cost of your order is", "$%.2f" % round(cost, 2)
+    print "The cost of shipping is:       ", "$%.2f" % round(shipping, 2)
+    print "The cost of your coffee is:    ", "$%.2f" % round(coffee, 2)
+    print "The total cost of your order is", "$%.2f" % round(cost, 2)
 
 main()    
-    
