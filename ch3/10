@@ -1,0 +1,26 @@
+#The length of a ladder
+#   When given the height and angle of the ladder
+
+import math
+def main():
+    #Describe the program to the user
+    print "This program will give you the length of a ladder needed to reach"
+    print "a given height when supplied the angle and the height."
+    print
+    print "Caution: For safety concerns, OSHA recommends that you maintaine"
+    print "a ratio of 4/1, or approxamitly a 55 degree angle."
+    print
+
+    #Collect the inputs from the user
+    height = input("What is the height that you wish to reach? ")
+    angledeg = input("At what angle will you position the ladder? ")
+
+    #convert the degree input to radians
+    rads = math.pi * angledeg / 180
+
+    #calculate the length of the ladder, or the hypotanuse of the triangle
+    ladder = height / math.sin(rads)
+
+    #return the length of the ladder to the user
+    print "The ladder needs to be", "%.2f" % round(ladder, 2), "units long"
+main()
