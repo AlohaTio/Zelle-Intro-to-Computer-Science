@@ -1,0 +1,19 @@
+#A program to find the sum of the first n natural numbers
+
+def main():
+    #Describe the program to the user
+    print "This program finds the sums of the first 'n' numbers"
+    print "The 'n' is supplied by the user"
+    print
+
+    sum = 0
+    #Get the inputs from the user
+    n = input("What 'n' would you like to use?: ")
+
+    #Calculate the sum of the sequence
+    for int in range(n+1):
+        
+        sum = sum + int
+
+    print sum
+main()    
