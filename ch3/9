@@ -1,0 +1,22 @@
+#Calculate the area of a triangle
+#   Write a program to calculate the are of a triangle given the length of its
+#   three sides a, b and c using these formulas;
+#   s = (a+b+c)/2
+#   A = sqrt(s*(s-a)*(s-b)*(s-c))
+
+import math
+def main():
+    #Describe the program to the user
+    print "This program finds the area of a triangle when given the length of the sides"
+    print
+
+    #Get the inputs from the user
+    a, b, c = input("Input the sides of the triangle (a, b, c): ")
+
+    #Do the calculations
+    s = (a + b + c)/2
+    area = math.sqrt(s * (s-a) * (s-b) * (s-c))
+
+    #Return the results
+    print "The area of that triangle is", area                
+main()
