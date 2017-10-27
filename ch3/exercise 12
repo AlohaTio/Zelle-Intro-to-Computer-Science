@@ -1,0 +1,23 @@
+# A program to find the sum of the cubes of the first n natural numbers
+#   where the value of n is provided by the user
+
+def main():
+    #Describe the program to the user
+    print "This program will find the sum of the cubes of the first n"
+    print "     natural numbers"
+
+    #establish the accumulator
+    sum = 0
+    
+    #prompt the user for the n they wish to find
+    n = input("What n would you like to use? ")
+
+    #set up the loop with the users input
+    #for int in range(n+1):
+    for int in range(n, 0, -1):
+        sum = sum + int**3
+
+    print sum
+main()
+              
+           
