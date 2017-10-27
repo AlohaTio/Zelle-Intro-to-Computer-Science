@@ -1,0 +1,20 @@
+#A Program that finds the average of a series of numbers entered by the user
+#   As  in the previous problem, the program will first ask the user
+#   how many numbers there are.
+
+def main():
+    #Describe the program for the user
+    print "This program will find the average of a series of numbers"
+
+    #Get the input from the user
+    n = input("How many numbers are in your series: ")
+
+    #Set up the loop and the accumulator
+    sum = 0
+    for int in range(n, 0, -1):
+        sum = sum + input("Enter a number: ")
+
+    #return the results    
+    print "The average of your", n, "numbers is:", sum / float(n)
+
+main()
