@@ -1,28 +1,23 @@
-# Chapter 3 Exercises
-# Molecular weight of a hydrocarbon
-#   This program determines the molecular weight of a hydrocarbon based on
-#   the number of hydrogen, carbon and oxygen atoms.
+#Python Programming Third Edition
+#Chapter 3, Exercise 
+#	Program to compute the molecular weight of carbohydrates
 
 def main():
+# Print an introduction
+	print("")
+	print("This program computes the molecular weight of a carbohydrate based")
+	print("on the number of carbon, hydrogen and oxygen atoms in the molecule.")
+	print("")
+	
+# Prompt the user for input - number of hydrogen, carbon and oxygen atoms
+	h = float(input("Enter the number of hydrogen atoms in the string: "))
+	c = float(input("Enter the number of carbon atoms in the string: "))
+	o = float(input("Enter the number of oxygen atoms in the string: "))	
+	
+# Compute the weight using the table
+	weight = h * 1.00794 + c * 12.0107 + o * 15.9994
 
-    # Describe the program to the user
-    print "This program determines the molecular weight of a hydrocarbon"
-    print "string based on the number of hydrogen, carbon and oxygen atoms."
-    print
-
-    #Obtain the inputs needed for the calculation
-    h = input("Enter the number of hydrogen atoms in the string: ")
-    c = input("Enter the number of carbon atoms: ")
-    o = input("Enter the number of oxygen atoms: ")
-
-    #compute the weight using the table
-        # H --> 1.0079
-        # C --> 12.011
-        # O --> 15.9994
-
-    weight = h * 1.0079 + c * 12.011 + o * 15.9994
-
-    #print the weight
-    print "The weight of your hydrocarbon string is", weight, "grams/mole"
-
-main()    
+# Return the computation to the user
+	print("The weight of your carbohydrate string is", weight, "grams/mole")
+	
+main()
