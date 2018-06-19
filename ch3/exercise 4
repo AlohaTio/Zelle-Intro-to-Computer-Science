@@ -1,16 +1,18 @@
-# Exercise 4
-#   Distance of a lightning strike based on difference between light and sound
-
+#Python Programming Third Edition
+#Chapter 3, Exercise 
+#	This program is ment to determine the distance of a lightning strike based on
+#	the difference between when it is seen and heard.
 def main():
-    # Describes the program to the user
-    print "This program determines the distance to a lightning strike based"
-    print "on the time elapsed between the flash and the sound of thunder."
-    print
+	#Describe the program to the user
+	print("This program is ment to determine the distance of a lightning strike ")
+	print("based on the time elapsed between the flash and the sound of thunder.")
+	
+	#Prompt the user for their input in seconds
+	time = float(input("Please input the elapsed time in seconds: "))
+	
+	#Calculate the distance and convert the answer to distance in miles
+	miles = time * 1100.0 / 5280.0
 
-    #Get our input. the number of seconds between seeing and hearing.
-    time = input("How many seconds between the lightning and thunder: ")
-    distance = time * 1100
-    miles = distance / 5280.0
-    print "The lightning is", distance, "feet away"
-    print "Or", "%.1f" % round(miles, 2), "miles away"
-main()
+	#Return the result and format the float
+	print("The lightning strike is aproxamitly", "%.2f" % round(miles, 2), "miles away.")
+main()	
