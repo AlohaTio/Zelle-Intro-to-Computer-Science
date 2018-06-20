@@ -1,27 +1,21 @@
-#The slope of a line
-#   This program calculates the slope of a line with two non-vertical points
+#Python Programming Third Edition
+#Chapter 3, Exercise 6
+#	This program calculates the slope of a line when given two points
+#	With the assumption that it is a NON-VERTICAL line.
 
 def main():
-    #Describe the program to the user
-    print "This program calculates the slope of a line given by two points"
-    print "The points must be non-vertical"
-    print
-
-    #Get the points from the user
-    pointx1, pointy1 = input("Enter point 1 with the format(x1,y1): ")
-    pointx2, pointy2 = input("Enter point 2 with the format(x2,y2): ")
-    x1, y1, x2, y2 = float(pointx1), float(pointy1), float(pointx2), float(pointy2)
-    
-
-    #Check for a zero in the denominator
-    if pointx2 - pointx1 == 0:
-        print "this is a vertical line"
-    else:
-    #Calculate the slope of the points
-        slope = (y2 - y1) /(x2 - x1)
-
-    #Print the answer
-        print "The slope of that line is", slope
-
-main()
+	#Describe the program to the user
+	print("This program calculates the slope of a NON-VERTICAL line")
+	
+	#Prompt the user for inputs in with simultaneous assignment
+	x1, y1 = eval(input("Please input the coordinates of the first point in the form x1, y1: "))
+	x2, y2 = eval(input("Please input the coordinates of the second point in the form x2, y2: "))
+	#x1, y1, x2, y2 = float(x1), float(y1), float(x2), float(y2)
+	
+    #calculate the slope of the line
+	slope = (y2 - y1) / (x2 - x1)
+	
+	#Return the slope of the line to the user
+	print("The slope of your line is:", "%.2f" % round(slope, 2))
+main()	
                   
