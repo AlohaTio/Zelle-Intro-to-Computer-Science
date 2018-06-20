@@ -1,19 +1,18 @@
-#A program that determines the distance between two points
+#Python Programming Third Edition
+#Chapter 3, Exercise 7
+#	This is a program to calculate the distance between two points on the coordinate plane
 
 import math
 def main():
-    #Describe the program to the user
-    print "This program determines the distance between two points"
-    print
-
-    #Get the inputs from the user
-    x1, y1 = input("Enter point 1 with the format x1, y1: ")
-    x2, y2 = input("Enter point 2 with the format x2, y2: ")
-
-    #Calculate the distance between the points
-    distance = math.sqrt((x2-x1)**2 + (y2-y1)**2)
-
-    #return the distance to the user rounded to 2 decimel points
-    print
-    print "This distance between your points is", "%.2f" % round(distance, 2) 
-main()    
+	print("This is a program to calculate the distance between two points on the coordinate plane")
+	
+	#prompt the user for inputs
+	x1, y1 = eval(input("Please enter the first point in the form x, y: "))
+	x2, y2 = eval(input("Please enter the second point in the form x, y: "))
+	
+	#Calculate the distance
+	dist = math.sqrt((x2-x1) ** 2 + (y2 - y1) **2)
+	
+	#Return the distance to the user
+	print("The distance between your two points is:", "%.2f" % round(dist, 2))
+main()	
