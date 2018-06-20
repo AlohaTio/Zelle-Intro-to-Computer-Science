@@ -1,22 +1,26 @@
-#Calculate the area of a triangle
-#   Write a program to calculate the are of a triangle given the length of its
-#   three sides a, b and c using these formulas;
-#   s = (a+b+c)/2
-#   A = sqrt(s*(s-a)*(s-b)*(s-c))
-
+#Python Programming Third Edition
+#Chapter 3, Exercise 9
+#The Area of a Triangle
+	#This is a program to compute the area of a triangle
+	#when you are given the length of the three sides
+	#s = (a+b+c)/2
+	#A = sqrt(s(s-a)(s-b)(s-c))
+	
 import math
+
 def main():
-    #Describe the program to the user
-    print "This program finds the area of a triangle when given the length of the sides"
-    print
+	#Describe the program to the user
+	print("This is a program to calculate the area of a triangle when n\you are given the length of the three sides")
+	
+	#prompt the user for the length of the three sides
+	a = float(input("Please enter the length of side a: "))
+	b = float(input("Please enter the length of side b: "))
+	c = float(input("Please enter the length of side c: "))
 
-    #Get the inputs from the user
-    a, b, c = input("Input the sides of the triangle (a, b, c): ")
+	#Calculate s the calculate the area of the triangle
+	s = (a + b + c) / 2
+	A = math.sqrt(s * (s - a) * (s - b) * (s - c))
 
-    #Do the calculations
-    s = (a + b + c)/2
-    area = math.sqrt(s * (s-a) * (s-b) * (s-c))
-
-    #Return the results
-    print "The area of that triangle is", area                
-main()
+	#Format and Return the Area of the triangle to the user	
+	print("The area of the triangle is", "%.2f" % round(A, 2))
+main()	
