@@ -1,19 +1,21 @@
-#A program to find the sum of the first n natural numbers
+#Python Programming Third Edition
+#Chapter 3, Exercise 11
+	#A program to find the sum of the first n natural numbers
 
 def main():
     #Describe the program to the user
-    print "This program finds the sums of the first 'n' numbers"
-    print "The 'n' is supplied by the user"
-    print
+    print("This program finds the sum of the first 'n' numbers")
+    print("The 'n' is supplied by the user")
+    print()
 
     sum = 0
     #Get the inputs from the user
-    n = input("What 'n' would you like to use?: ")
+    n = int(input("What 'n' would you like to use?: "))
 
     #Calculate the sum of the sequence
-    for int in range(n+1):
+    for k in range(1, n + 1):
         
-        sum = sum + int
+        sum = sum + k
 
-    print sum
+    print("The sum of the fist", n, "numbers is", sum)
 main()    
