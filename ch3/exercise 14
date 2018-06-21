@@ -1,5 +1,5 @@
 #Python Programming Third Edition
-#Chapter 3, Exercise 13
+#Chapter 3, Exercise 14
 #	Write a program that finds the average of a series of numbers entered by the user
 
 def main():
