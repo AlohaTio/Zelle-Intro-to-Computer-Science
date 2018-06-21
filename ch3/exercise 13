@@ -1,22 +1,21 @@
-#A program to sum a series of number entered by the user. The program should
-#   first ask the user how many number are to be summed. It should then input
-#   each number and print a total sum
-
+#Python Programming Third Edition
+#Chapter 3, Exercise 13
+#	Write a program to sum a series of numbers entered by the user
+#	The program will prompt the user for the number of numbers to be summed
 
 def main():
-    
-    #Describe the program to the user
-    print "This program find the sum of a series of numbers"
-    print "The user defines how many numbers in the series"
-
-    #Get input from the user
-    n = input("How many numbers do you want to sum: ")
-
-    #Set up the loop and the accumulator
-    sum = 0
-    for int in range(n, 0, -1):
-        sum = sum + input("Enter a number: ")
-    print sum
-
-main()    
-        
+#Describe the program for the user
+	print("This program will sum a series of number that are entered by the user")
+	print("The user will first input the number of numbers to be added up")
+	
+#Prompt the user for the number of numbers to be summed up
+	n = int(input("Please enter the number of numbers that you would like to add up: "))	
+	
+#Set up the loop and the accumulator
+	total = 0.0
+	for i in range(n):
+		total = total + float(input("Enter a number : "))
+		
+#Return the sum of the numbers to the user
+	print("The sum of your numbers is", total)	
+main()	
