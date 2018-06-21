@@ -1,20 +1,22 @@
-#A Program that finds the average of a series of numbers entered by the user
-#   As  in the previous problem, the program will first ask the user
-#   how many numbers there are.
+#Python Programming Third Edition
+#Chapter 3, Exercise 13
+#	Write a program that finds the average of a series of numbers entered by the user
 
 def main():
-    #Describe the program for the user
-    print "This program will find the average of a series of numbers"
-
-    #Get the input from the user
-    n = input("How many numbers are in your series: ")
-
-    #Set up the loop and the accumulator
-    sum = 0
-    for int in range(n, 0, -1):
-        sum = sum + input("Enter a number: ")
-
-    #return the results    
-    print "The average of your", n, "numbers is:", sum / float(n)
-
-main()
+#Describe the program for the user
+	print("This program will average a series of number that are entered by the user")
+	print("The user will first input the number of numbers to be averaged")
+	
+#Prompt the user for the number of numbers to be summed up
+	n = int(input("Please enter the number of numbers that you would like to add up: "))	
+	
+#Set up the loop and the accumulator
+	total = 0.0
+	for i in range(n):
+		total = total + float(input("Enter a number : "))
+	
+#Calculate the average
+	average = total / n 	
+#Return the sum of the numbers to the user
+	print("The average of your numbers is", average)	
+main()	
