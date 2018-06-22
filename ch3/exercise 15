@@ -1,24 +1,21 @@
-#Write a program that approximates the value of pi by summing the terms of
-#   this series: 4/1 - 4/3 + 4/5 - 4/7 + 4/9 - 4/11+... The program
-#   should prompt the user for n, the number of terms to sum, and then output the
-#   sum of the first n terms of this series. Have your program subtract the
-#   approximation from the value of math.pi to see how accurate it is.
+#Python Programming Third Edition
+#Chapter 3, Exercise 15
+#	This is a program to estimate the number pi
+#	Using the form 4/1 - 4/3 + 4/5 - 4/7 + 4/9
+
 import math
+
 def main():
-    #Describe the program for the user
-    print "This is a program to estimate pi by summing a bunch of terms"
-    print "4/1 - 4/3 + 4/5 - 4/7 + 4/9 - 4/11+..."
-    print
-
-    #Get input from the user
-    n = input("How many terms of n to you want to sum? ")
-
-    #set up the loop
-    sum = 0.0
-    for i in range(1,n+1):
-        sum = sum + ((-1)**(i+1) * 4.0/(2*i -1))
-
-    #return results to the user
-    print "Your estimation for pi with", i, "terms is:", sum
-    print "The difference between pi and your estimation is", math.pi - sum
-main()                     
+	print("This is a program to estimate the number pi")
+	print("Using the sum of the sequence 4/1, -4/3, 4/5, -4/7,...")
+	print()
+	n = int(input("How many terms would you like to sum to estimate pi? "))
+	
+	total = 0
+	for i in range(n):
+		total = total + (4 * (-1) ** i) / (2 * i + 1)
+		
+	diff = math.pi - total
+	print("Pi estimate is", total)
+	print("The difference between your estimate and pi is", diff)
+main()	                
