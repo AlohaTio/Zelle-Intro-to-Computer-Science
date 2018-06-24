@@ -1,0 +1,22 @@
+#Python Programming Third Edition
+#Chapter 3, Exercise 16
+#	Fibonacci sequence
+#	This is a program to compute the nth Fibonacci number
+#		when the n is provided by the user
+
+def main():
+	print("This is a program to compute the nth Fibonacci number")
+	print("when the n is proided by the user")
+	print()
+	
+	n = int(input("What n would you like to use?: "))
+	
+	n1 = 1
+	n2 = 1
+	
+	for i in range(3, n+1):
+		n1, n2 = n2, n1 + n2
+		print(n2)
+		
+	print("The ", n, "th Fibonacci number is ", n2, sep="")
+main()	
